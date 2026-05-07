@@ -1,0 +1,63 @@
+{
+  "layer": "top",
+  "spacing": 3,
+  "height": 0,
+  "margin-bottom": 0,
+  "margin-top": 3,
+  "position": "top",
+  "margin-right": 3,
+  "margin-left": 3,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [
+  ],
+  "modules-right": [
+    "tray",
+    "network",
+    "sway/language",
+    "pulseaudio",
+    "clock"
+  ],
+  "sway/language": {
+  "format": "{}",
+  "tooltip-format" : "{}",
+  "format-en": "US",
+  "format-ar": "AR"
+  },
+  "tray": {
+    "spacing": 10,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "   🕑 {:%H:%M %p \n 📅 %Y/%m/%d}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click": "gsimplecal",
+    "calendar": {
+      "format": {
+        "months": "<span color='#00b7eb'><b>{}</b></span>",
+        "today": "<span color='#00b7eb'><b>{}</b></span>"
+      }
+    }
+  },
+  "network": {
+    "format-wifi": " {bandwidthDownBits}",
+    "format-ethernet": " {bandwidthDownBits}",
+    "format-disconnected": "󰤮 No Network",
+    "interval": 5,
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "max-volume": 200,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-icons": [
+    ],
+    "nospacing": 1,
+    "format-muted": " ",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+},
