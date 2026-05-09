@@ -1,5 +1,6 @@
 alias cd='z'
-alias ll='ls -lhF --color=auto --group-directories-first -h'
+alias ll='eza -lhF --color=auto --group-directories-first --git'
+alias tree='eza --tree --git --group-directories-first'
 alias hist='history | fzf'
 alias ..='cd ..'
 alias ...='cd ../..'
