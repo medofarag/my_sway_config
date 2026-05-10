@@ -5,7 +5,7 @@ mkcd() {
 
 cdls() {
   cd $1
-  ls -laF
+  eza -lh --group-directories-first --git
 }
 
 update() {

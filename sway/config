@@ -6,6 +6,7 @@
 # Start polkit-agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id sh -c ' eval $(gnome-keyring-daemon --login) eval $(gnome-keyring-daemon --start --components=secrets,ssh) export SSH_AUTH_SOCK'
+# exec --no-startup-id 
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -58,7 +59,7 @@ output DP-2 resolution 1440x900@60Hz
 #
    input type:keyboard {
        xkb_layout "us,ara"
-       xkb_options "grp:alt_shift_toggle"
+       xkb_options "grp:win_space_toggle,compose:caps"
    }
 #
 # You can also configure each device individually.

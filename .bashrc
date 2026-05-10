@@ -2,7 +2,6 @@
 export EDITOR='nvim'
 export VISUAL='nvim'
 export QT_QPA_PLATFORMTHEME=qt5ct
-
 # bash history enhanced features
 export HISTSIZE=10000
 export HISTFILESIZE=20000
