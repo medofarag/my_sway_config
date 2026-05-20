@@ -42,22 +42,21 @@
     }
   },
   "network": {
-    "format-wifi": " {bandwidthDownBits}",
-    "format-ethernet": " {bandwidthDownBits}",
+    "format-wifi": "   {bandwidthDownBits}",
+    "format-ethernet": "   {bandwidthDownBits}",
     "format-disconnected": "󰤮 No Network",
     "interval": 5,
     "tooltip": false
   },
-  "pulseaudio": {
+  "pipewire": {
     "scroll-step": 5,
     "max-volume": 200,
     "format": "{icon} {volume}%",
     "format-bluetooth": "{icon} {volume}%",
-    "format-icons": [
-    ],
+    "format-icons": ["🔈", "🔉", "🔊"],
     "nospacing": 1,
-    "format-muted": " ",
+    "format-muted": "🔇  ",
     "on-click": "pavucontrol",
     "tooltip": false
-  },
+  }
 },
