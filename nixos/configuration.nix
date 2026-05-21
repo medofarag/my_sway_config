@@ -20,6 +20,7 @@
       enable = false;
       efiSupport = true;
       device = "nodev";
+      theme = pkgs.kdePackages.breeze-grub;
     };
   
     efi = {
@@ -75,8 +76,8 @@
   programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
-      swaylock
       swayidle
+      swaylock
       swayimg
       waybar
       jq
@@ -182,6 +183,22 @@
     ];
   };
 
+  services.searx = {
+    enable = true;
+    settings = {
+      use_default_settings = true;
+      server = {
+        secret_key = "your-strong-secret-key";
+        bind_address = "127.0.0.1";
+        port = 8888;
+      };
+
+      search.safe_search = 1;
+      search.autocomplete = "duckduckgo";
+
+    };
+  };
+
   # Install firefox.
   # programs.firefox.enable = true;
   programs.neovim.enable = true;
@@ -214,6 +231,7 @@
     fzf
     git
     fastfetch
+    tree-sitter
   ];
 
   programs.virt-manager.enable = true;
