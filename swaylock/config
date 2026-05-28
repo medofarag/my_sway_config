@@ -1,0 +1,29 @@
+image=/home/medo/Pictures/Wallpapers/6.jpg
+clock=true
+color=000000
+font-size=75
+show-failed-attempts=true
+scaling=fill
+indicator-radius=150
+indicator-thickness=15
+
+# base colors
+ring-color=ffffff       
+inside-color=000000     
+line-color=ffffff       
+
+# Colors when the password is typed correctly
+ring-ver-color=00ff00
+inside-ver-color=000000
+line-ver-color=00ff00
+
+# Colors when entering the wrong password
+ring-wrong-color=ff0000
+inside-wrong-color=000000
+line-wrong-color=ff0000
+
+# Colors when Caps Lock is activated
+ring-caps-lock-color=ffff00
+inside-caps-lock-color=000000
+line-caps-lock-color=ffff00
+

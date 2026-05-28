@@ -7,7 +7,7 @@ alias ...='cd ../..'
 alias edit='$EDITOR'
 alias weather='curl wttr.in'
 alias pray='node ~/scripts/playertime.js'
-
+alias backup='bash ~/scripts/backup_my_configs.sh'
 # tmux
 alias tmuxac='tmux new -A -s'
 alias tmuxr='tmux kill-session -t'

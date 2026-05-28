@@ -6,7 +6,9 @@
 # Start polkit-agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id sh -c ' eval $(gnome-keyring-daemon --login) eval $(gnome-keyring-daemon --start --components=secrets,ssh) export SSH_AUTH_SOCK'
-# exec --no-startup-id 
+
+# auto start browser
+exec $browser 
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -21,9 +23,10 @@ set $term foot
 # Your preferred application launcher
 set $menu fuzzel
 set $filemanager pcmanfm
-set $texteditor mousepad
+set $texteditor kwrite
 set $emojiselector bemoji
 set $browser librewolf
+set $screenlocker swaylock
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -39,7 +42,7 @@ output DP-2 resolution 1440x900@60Hz
 # Example configuration:
 #
 # exec swayidle -w \
-#          timeout 300 'gtklock -f -c 000000' \
+#          timeout 300 'swaylock -f -c 000000' \
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
@@ -91,7 +94,7 @@ exec_always autotiling
     bindsym alt+0 exec $emojiselector
 
     # swaylock
-    bindsym $mod+ctrl+l exec gtklock
+    bindsym $mod+ctrl+l exec $screenlocker
     
     # browser
     bindsym $mod+b exec $browser
@@ -285,7 +288,7 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	swaybar_command waybar
-    }
+}
 
 
 include /etc/sway/config.d/*
