@@ -1,6 +1,7 @@
 # Variables
 export EDITOR='nvim'
 export VISUAL='nvim'
+export SUDO_EDITOR="nvim"
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 # bash history enhanced features

@@ -17,8 +17,5 @@
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
     };
-    
-    # Automatic updates configuration
-    onCalendar = "monthly";  # Updates every month
   };
 }

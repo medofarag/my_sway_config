@@ -8,11 +8,13 @@ cdls() {
   eza -lh --group-directories-first --git
 }
 
-update() {
+full-update() {
+  sudo nix flake update && sudo nixos-rebuild switch --flake /etc/nixos/#medo-workstation
+  flatpak update -y
   ble-update
-  yay -Syu
 }
 
+: '
 # runit
 sv-ls() {
   echo "===available services==="
@@ -39,3 +41,4 @@ sv-rm() {
   sudo rm -rf /var/service/$1
   sudo rm -rf /etc/runit/runsvdir/default/$1
 }
+'

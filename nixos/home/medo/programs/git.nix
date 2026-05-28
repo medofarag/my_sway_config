@@ -4,11 +4,13 @@
 {
   programs.git = {
     enable = true;
-    userName = "MedoFarag";
-    userEmail = "medofarag@proton.me";
-    extraConfig = {
-      init.defaultBranch = "main";
-      core.editor = "nvim";
+    settings = {
+      user.name = "MedoFarag";
+      user.email = "medofarag@proton.me";
+      extraConfig = {
+        init.defaultBranch = "main";
+        core.editor = "nvim";
+      };
     };
   };
 }

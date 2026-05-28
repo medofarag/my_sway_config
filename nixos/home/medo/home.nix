@@ -3,7 +3,7 @@
 
 {
   imports = [
-    # ./packages.nix
+    ./packages.nix
     ./programs/git.nix
     # ./programs/bash.nix
     ./programs/starship.nix
@@ -14,4 +14,11 @@
   home.stateVersion = "25.11";
 
   programs.home-manager.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
 }

@@ -213,7 +213,7 @@
     settings = {
       use_default_settings = true;
       server = {
-        server.secret_key = "searx_key";
+        server.secret_key = "key_key";
         bind_address = "127.0.0.1";
         port = 8888;
       };
@@ -271,10 +271,8 @@
     btop
     bat
     eza
-    zoxide
     ripgrep
     fd
-    tmux
     fzf
     git
     fastfetch
@@ -289,7 +287,7 @@
     unzip
     gvfs
     udisks2
-/*
+
     # Disk
     gparted
     btrfs-progs
@@ -297,11 +295,11 @@
     exfatprogs
     dosfstools
     xfsprogs
-*//*
+
     # wine
     wine
     winetricks
-*/
+
     # Themes
     kdePackages.breeze
     kdePackages.breeze-gtk
@@ -351,7 +349,7 @@
       PermitRootLogin = "no";
     };
   };
-/*  
+
   # Enable fail2ban to prevent Hacking using random passwords
   services.fail2ban = {
     enable = true;
@@ -385,10 +383,10 @@
   networking.firewall = {
     enable = true;
     # Open ports in the firewall.
-    allowedTCPPorts = [ 22 80 8888 ]; # searxng ssh http
+    allowedTCPPorts = [ 22 80 8888 ]; # ssh http searxng
     # allowedUDPPorts = [ ];
   };
-*/
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
