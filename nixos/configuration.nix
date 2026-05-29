@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib,... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -100,27 +100,6 @@
       swayidle
       swaylock
       waybar
-      eww
-      mailcap
-      foot
-      fuzzel
-      bemoji
-      wl-clipboard
-      autotiling
-      fnott
-      pcmanfm
-      xarchiver
-      gsimplecal
-      gnome-clocks
-      grim
-      flameshot
-      gpick
-      ffmpegthumbnailer
-      qt6Packages.qt6ct
-      libsForQt5.qt5ct
-      nwg-look
-      libappimage
-      kdePackages.gwenview
     ];
   };
 
@@ -131,7 +110,7 @@
         monospace = [ "JetBrains Mono" "DejaVu Sans Mono" ];
         sansSerif = [ "Noto Sans" "DejaVu Sans" ];
         serif = [ "Noto Serif" "DejaVu Serif" ];
-        emoji = [ "unicode-emoji" ];
+        # emoji = [ "unicode-emoji" ];
       };
     };
     packages = with pkgs; [
@@ -190,23 +169,6 @@
   nixpkgs.config.permittedInsecurePackages = [
     "luanti-5.14.0"
   ];
-
-  services.searx = {
-    enable = true;
-    package = pkgs.searxng;
-    settings = {
-      use_default_settings = true;
-      server = {
-        server.secret_key = "my_strong_secret_key_18";
-        bind_address = "127.0.0.1";
-        port = 8888;
-      };
-
-      search.safe_search = 1;
-      search.autocomplete = "duckduckgo";
-
-    };
-  };
 
   programs.steam = {
     enable = true;
@@ -292,6 +254,29 @@
 
     # polkit agent
     polkit_gnome
+
+    # sway
+    eww
+    mailcap
+    foot
+    fuzzel
+    bemoji
+    wl-clipboard
+    autotiling
+    fnott
+    pcmanfm
+    xarchiver
+    gsimplecal
+    gnome-clocks
+    grim
+    flameshot
+    gpick
+    ffmpegthumbnailer
+    qt6Packages.qt6ct
+    libsForQt5.qt5ct
+    nwg-look
+    libappimage
+    kdePackages.gwenview
   ];
 
   # enable flatpak
