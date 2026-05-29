@@ -5,7 +5,6 @@
   imports = [
     ./packages.nix
     ./programs/git.nix
-    # ./programs/bash.nix
     ./programs/starship.nix
   ];
 

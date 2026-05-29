@@ -7,6 +7,9 @@
   home.packages = with pkgs; [
     zoxide
     tmux
+    cbonsai
+    cmatrix
+    asciiquarium
   ];
 }
 
