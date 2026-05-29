@@ -83,33 +83,16 @@
   # services.desktopManager.plasma6.enable = true;
   # services.displayManager.sddm.enable = true;
 
+  # Enable Cinnamon
+  # services.xserver.desktopManager.cinnamon.enable = true;
+  # environment.cinnamon.excludePackages = [
+  #   pkgs.blueman
+  # ];
+  # for online accounts
+  # services.gnome.gnome-online-accounts.enable = true;
+
   security.polkit.enable = true;
   hardware.graphics.enable = true;
-
-  fonts = {
-    fontconfig = {
-      enable = true;
-      defaultFonts = {
-        monospace = [ "JetBrains Mono" "DejaVu Sans Mono" ];
-        sansSerif = [ "Noto Sans" "DejaVu Sans" ];
-        serif = [ "Noto Serif" "DejaVu Serif" ];
-        emoji = [ "Noto Color Emoji" ];
-      };
-    };
-    packages = with pkgs; [
-      font-awesome
-      nerd-fonts.symbols-only
-      noto-fonts-cjk-sans
-      nerd-fonts.dejavu-sans-mono
-      unicode-emoji
-      liberation_ttf
-      noto-fonts
-      noto-fonts-color-emoji
-      dejavu_fonts
-      jetbrains-mono
-      # google-fonts
-    ];
-  };
 
   programs.sway = {
     enable = true;
@@ -137,9 +120,34 @@
       libsForQt5.qt5ct
       nwg-look
       libappimage
+      kdePackages.gwenview
     ];
   };
 
+  fonts = {
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = [ "JetBrains Mono" "DejaVu Sans Mono" ];
+        sansSerif = [ "Noto Sans" "DejaVu Sans" ];
+        serif = [ "Noto Serif" "DejaVu Serif" ];
+        emoji = [ "unicode-emoji" ];
+      };
+    };
+    packages = with pkgs; [
+      font-awesome
+      nerd-fonts.symbols-only
+      noto-fonts-cjk-sans
+      nerd-fonts.dejavu-sans-mono
+      unicode-emoji
+      liberation_ttf
+      noto-fonts
+      noto-fonts-color-emoji
+      dejavu_fonts
+      jetbrains-mono
+      # google-fonts
+    ];
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -175,33 +183,7 @@
     description = "Mahmoud Farag";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "podman"];
     packages = with pkgs; [
-      fsearch
-      librewolf
-      # sage
-      # libreoffice
-      nix-search
-      # emacs
-      # tesseract
-      # yt-dlp
-
-      # Kde packages
-      haruna
-      kdePackages.elisa
-      kdePackages.kolourpaint
-      kdePackages.okular
-      kdePackages.kate
-      kdePackages.kasts
-      kdePackages.gwenview
-
-      # Unfree
-      # obsidian
-
-      # Games
-      luanti
-      # supertux
-      # supertuxkart
-      # xonotic
-
+      
     ];
   };
 
@@ -238,7 +220,6 @@
     "steam-original"
     "steam-unwrapped"
     "steam-run"
-    "obsidian"
   ];
 
   # for data usage
