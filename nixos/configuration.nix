@@ -91,6 +91,17 @@
   # for online accounts
   # services.gnome.gnome-online-accounts.enable = true;
 
+  # Enable Gnome
+  # services.displayManager.gdm.enable = true;
+  # services.desktopManager.gnome.enable = true;
+
+  # To disable installing GNOME's suite of applications
+  # and only be left with GNOME shell.
+  # services.gnome.core-apps.enable = false;
+  # services.gnome.core-developer-tools.enable = false;
+  # services.gnome.games.enable = false;
+  # environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+
   security.polkit.enable = true;
   hardware.graphics.enable = true;
 
@@ -100,6 +111,28 @@
       swayidle
       swaylock
       waybar
+      eww
+      mailcap
+      foot
+      fuzzel
+      bemoji
+      wl-clipboard
+      autotiling
+      fnott
+      pcmanfm
+      xarchiver
+      gsimplecal
+      gnome-clocks
+      grim
+      flameshot
+      gpick
+      ffmpegthumbnailer
+      qt6Packages.qt6ct
+      libsForQt5.qt5ct
+      nwg-look
+      libappimage
+      kdePackages.gwenview
+      polkit_gnome
     ];
   };
 
@@ -115,16 +148,15 @@
     };
     packages = with pkgs; [
       font-awesome
+      noto-fonts-color-emoji
       nerd-fonts.symbols-only
-      noto-fonts-cjk-sans
-      nerd-fonts.dejavu-sans-mono
-      unicode-emoji
+      # noto-fonts-cjk-sans
+      # nerd-fonts.dejavu-sans-mono
+      # unicode-emoji
       liberation_ttf
       noto-fonts
-      noto-fonts-color-emoji
       dejavu_fonts
       jetbrains-mono
-      # google-fonts
     ];
   };
 
@@ -251,32 +283,6 @@
     kdePackages.breeze-gtk
     kdePackages.breeze-icons
     kdePackages.breeze-grub
-
-    # polkit agent
-    polkit_gnome
-
-    # sway
-    eww
-    mailcap
-    foot
-    fuzzel
-    bemoji
-    wl-clipboard
-    autotiling
-    fnott
-    pcmanfm
-    xarchiver
-    gsimplecal
-    gnome-clocks
-    grim
-    flameshot
-    gpick
-    ffmpegthumbnailer
-    qt6Packages.qt6ct
-    libsForQt5.qt5ct
-    nwg-look
-    libappimage
-    kdePackages.gwenview
   ];
 
   # enable flatpak
