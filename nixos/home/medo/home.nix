@@ -6,7 +6,6 @@
     ./packages.nix
     ./programs/git.nix
     ./programs/starship.nix
-    ./distrobox.nix
   ];
 
   home.username = "medo";

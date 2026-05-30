@@ -6,14 +6,24 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
       # systemd services
       ./services.nix
+
       # systmed-units
       ./systemd-units.nix
+
       # fail2ban & firewall
       ./fail2ban-and-firewall.nix
+
+      # Desktop
+      ./desktop/sway.nix
+      # ./desktop/plasma.nix
+      # ./desktop/gnome.nix
+      # ./desktop/cinnamon.nix
     ];
 
   # Bootloader.
@@ -77,64 +87,12 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
+
+  # display server
   services.displayManager.ly.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  # services.desktopManager.plasma6.enable = true;
-  # services.displayManager.sddm.enable = true;
-
-  # Enable Cinnamon
-  # services.xserver.desktopManager.cinnamon.enable = true;
-  # environment.cinnamon.excludePackages = [
-  #   pkgs.blueman
-  # ];
-  # for online accounts
-  # services.gnome.gnome-online-accounts.enable = true;
-
-  # Enable Gnome
-  # services.displayManager.gdm.enable = true;
-  # services.desktopManager.gnome.enable = true;
-
-  # To disable installing GNOME's suite of applications
-  # and only be left with GNOME shell.
-  # services.gnome.core-apps.enable = false;
-  # services.gnome.core-developer-tools.enable = false;
-  # services.gnome.games.enable = false;
-  # environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 
   security.polkit.enable = true;
   hardware.graphics.enable = true;
-
-  programs.sway = {
-    enable = true;
-    extraPackages = with pkgs; [
-      swayidle
-      swaylock
-      waybar
-      eww
-      mailcap
-      foot
-      fuzzel
-      bemoji
-      wl-clipboard
-      autotiling
-      fnott
-      pcmanfm
-      xarchiver
-      gsimplecal
-      gnome-clocks
-      grim
-      flameshot
-      gpick
-      ffmpegthumbnailer
-      qt6Packages.qt6ct
-      libsForQt5.qt5ct
-      nwg-look
-      libappimage
-      kdePackages.gwenview
-      polkit_gnome
-    ];
-  };
 
   fonts = {
     fontconfig = {
@@ -143,7 +101,6 @@
         monospace = [ "JetBrains Mono" "DejaVu Sans Mono" ];
         sansSerif = [ "Noto Sans" "DejaVu Sans" ];
         serif = [ "Noto Serif" "DejaVu Serif" ];
-        # emoji = [ "unicode-emoji" ];
       };
     };
     packages = with pkgs; [
@@ -152,7 +109,7 @@
       nerd-fonts.symbols-only
       # noto-fonts-cjk-sans
       # nerd-fonts.dejavu-sans-mono
-      # unicode-emoji
+      unicode-emoji
       liberation_ttf
       noto-fonts
       dejavu_fonts
