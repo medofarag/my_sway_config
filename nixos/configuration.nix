@@ -20,9 +20,9 @@
       ./fail2ban-and-firewall.nix
 
       # Desktop
-      ./desktop/sway.nix
+      # ./desktop/sway.nix
       # ./desktop/plasma.nix
-      # ./desktop/gnome.nix
+      ./desktop/gnome.nix
       # ./desktop/cinnamon.nix
     ];
 
@@ -86,10 +86,7 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
-  # display server
-  services.displayManager.ly.enable = true;
+  # services.xserver.enable = true;
 
   security.polkit.enable = true;
   hardware.graphics.enable = true;
@@ -234,12 +231,6 @@
     # wine
     wine
     winetricks
-
-    # Themes
-    kdePackages.breeze
-    kdePackages.breeze-gtk
-    kdePackages.breeze-icons
-    kdePackages.breeze-grub
   ];
 
   # enable flatpak

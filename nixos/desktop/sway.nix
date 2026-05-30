@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }:
 
 {
+  services.displayManager.ly = {
+    enable = true;
+  };
+
   programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
@@ -29,6 +33,12 @@
       libappimage
       kdePackages.gwenview
       polkit_gnome
+
+      # Themes
+      kdePackages.breeze
+      kdePackages.breeze-gtk
+      kdePackages.breeze-icons
+      kdePackages.breeze-grub
     ];
   };
 }
