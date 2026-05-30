@@ -20,8 +20,8 @@
     nixosConfigurations.medo-workstation = nixpkgs.lib.nixosSystem {
       modules = [
         ./configuration.nix                       # Your main configuration
-        declarative-flatpak.nixosModules.default  # Declarative flatpak support
-        ./modules/flatpak.nix                     # Separate flatpak module
+        # declarative-flatpak.nixosModules.default  # Declarative flatpak support
+        # ./modules/flatpak.nix                     # Separate flatpak module
         home-manager.nixosModules.home-manager    # home manager support
         ./modules/home-manager.nix                # separate home-manager module
       ];

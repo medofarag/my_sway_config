@@ -12,7 +12,6 @@
     asciiquarium
 
     fsearch
-    librewolf
     # sage
     # octave
     # libreoffice

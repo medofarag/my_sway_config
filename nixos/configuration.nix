@@ -20,9 +20,10 @@
       ./fail2ban-and-firewall.nix
 
       # Desktop
+      ./desktop/hyprland.nix
       # ./desktop/sway.nix
       # ./desktop/plasma.nix
-      ./desktop/gnome.nix
+      # ./desktop/gnome.nix
       # ./desktop/cinnamon.nix
     ];
 

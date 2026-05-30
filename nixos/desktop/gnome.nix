@@ -18,7 +18,7 @@
     gnome-tour gnome-user-docs 
   ];
 
-  environment.extraPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.arc-menu
