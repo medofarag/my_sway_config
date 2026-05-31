@@ -7,7 +7,7 @@
     settings = {
       use_default_settings = true;
       server = {
-        server.secret_key = "my_strong_secret_key_18";
+        # server.secret_key = "my_strong_secret_key_18";
         bind_address = "127.0.0.1";
         port = 8888;
       };

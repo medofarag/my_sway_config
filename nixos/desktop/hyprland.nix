@@ -6,13 +6,15 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    theme = "breeze";
+    enableHidpi = true;
   };
 
   programs.dconf.profiles.user.databases = [
     {
       settings."org/gnome/desktop/interface" = {
         gtk-theme = "breeze-gtk";
-        icon-theme = "Flat-Remix-Red-Dark";
+        icon-theme = "Noto Sans Emoji";
         font-name = "Noto Sans Medium 11";
         document-font-name = "Noto Sans Medium 11";
         monospace-font-name = "Noto Sans Mono Medium 11";
@@ -26,7 +28,7 @@
     hyprlauncher
     hyprlock
     hypridle
-    swww
+    awww
     kitty
     hyprnotify
     hyprkeys

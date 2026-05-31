@@ -3,7 +3,7 @@
 {
   imports = 
     [
-      ./services/polkit.nix
+      # ./services/polkit.nix
       ./services/searxng.nix
     ];
 }

@@ -10,14 +10,7 @@
 
   home.username = "medo";
   home.homeDirectory = "/home/medo";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-  };
 }
